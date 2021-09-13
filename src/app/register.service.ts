@@ -12,12 +12,10 @@ export class RegisterService {
   
   // registerFormm :RegisterModel=new RegisterModel();
 
- register(registerModel:RegisterModel): Observable<any>{
-   console.log("firstName "+registerModel.firstName);
-   console.log("lastName "+registerModel.lastName);
-   console.log("mobileNumber "+registerModel.mobileNumber);
+ register(registerModel:RegisterModel){
+   
    console.log("json "+JSON.stringify(registerModel));
-   return this.httpClient.post<String>("http://localhost:2529/v1/register",registerModel);
+   return this.httpClient.post("http://localhost:2529/v1/register",registerModel);
     
  }
 }

@@ -20,9 +20,9 @@ export class RegisterComponent implements OnInit {
   }
   
   registerUser():void{
-       this.registerService.register(this.registerForm).subscribe(data =>{
-         console.log(data);
-       });
+       this.registerService.register(this.registerForm).subscribe();
+         
+       
        
       //  window.alert('Registration success'+registerForm)
   }
